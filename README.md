@@ -1,6 +1,6 @@
-# Demo Stage Minikube Kubernetes Cluster
+# Remote accessable Minikube Kubernetes Cluster
 
-Instructions on how to setup a Minikube Cluster on Ubuntu
+Instructions on how to setup a Minikube Cluster on Ubuntu. And how to set it up for remote controll via kubectl from another machine.
 
 
 
