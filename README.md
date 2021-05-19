@@ -1,4 +1,4 @@
-# Demo Stage Mimikube Kubernetes Cluster
+# Demo Stage Minikube Kubernetes Cluster
 
 Instructions on how to setup a Minikube Cluster on Ubuntu
 
