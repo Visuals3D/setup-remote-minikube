@@ -160,7 +160,7 @@ preferences: {}
 
 clusters:
 - cluster:
-    certificate-authority-data: 
+    certificate-authority-data: <ca.crt>
     server: https://<ipaddress>:51999
   name: minikube
 contexts:
@@ -171,8 +171,8 @@ contexts:
 users:
 - name: minikube
   user:
-    client-certificate-data: 
-    client-key-data: 
+    client-certificate-data: <client.crt>
+    client-key-data: <client.key>
 ````
 
 Now there are 3 <> left with file names. There is something missing. These are the certificates to authenticate this **local machines** instance of kubectl against the minikube cluster.
