@@ -268,7 +268,6 @@ If everything is working fine by starting and stopping the service manually the 
 
 ````shell
   sudo systemctl enable control-minikube
-  sudo systemctl enable control-minikube
 ````
   
 
