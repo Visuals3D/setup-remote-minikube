@@ -214,6 +214,69 @@ Just make shure its the same one used before to setup the config file on your **
 ````shell
 minikube start --apiserver-ips=<ipaddress>
 ````
+  
+  
+  
+## Add startup service
+  
+If you want your minikube cluster to start on every bootup of its host machine a service must be set up and enabled.
+To do so follow the steps below:
+  
+Add a new system to the /etc/systemd/system folder
+  
+````shell
+cd /etc/systemd/system
+touch control-minikube.service
+````
+  
+Now open the file with nano or every other editor and edit the file created in the last step.
+The file should look something like this afterwards:
+  
+````
+[Unit]
+Description=Runs minikube on startup
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=minikube start
+ExecStop=minikube stop
+User=<your user name>
+Group=<your user group>
+
+[Install]
+WantedBy=multi-user.target
+
+````
+  
+Now reload everything so the new file will be availible for systemctl
+  
+````shell
+  sudo systemctl daemon-reload
+````
+  
+After that the control-minikube service should be availible and can be used to start and stop the service. 
+Use it and test if its working
+
+````shell
+  sudo systemctl start control-minikube
+  sudo systemctl stop control-minikube
+````
+  
+If everything is working fine by starting and stopping the service manually the service can be anabled for usage on boot.
+
+
+````shell
+  sudo systemctl enable control-minikube
+  sudo systemctl enable control-minikube
+````
+  
+
+  
+
+
+  
+
 
 
 
