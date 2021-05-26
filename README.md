@@ -235,7 +235,8 @@ The file should look something like this afterwards:
 ````
 [Unit]
 Description=Runs minikube on startup
-
+After=docker
+  
 [Service]
 Type=oneshot
 RemainAfterExit=yes
