@@ -12,7 +12,7 @@ For that we use snap which might need to be installed first
 
 ````shell
 sudo apt-get update
-sudp apt-get install snap
+sudo apt-get install snap
 ````
 
 Afterwards simply install kubectl
