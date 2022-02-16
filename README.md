@@ -39,6 +39,16 @@ sudo dpkg -i minikube_latest_amd64.deb
 ````
 
 
+## Start Minikube
+
+Start Minikube with a api-server on the ip you want to connect to. This ip address should be the adress of your host machine on which the cluster is running.
+If the cluster is behind some other proxy or what ever it has to be the adress of the first proxy the request will hit. It can even be a domain if you want to.
+Just make shure its the same one used before to setup the config file on your **local machine**
+
+````shell
+minikube start --apiserver-ips=<ipaddress>
+````
+  
 
 ## Setup Nginx Proxy for Api-Server
 
@@ -201,20 +211,6 @@ base64 ~/.minikube/profiles/minikube/client.key
 **Important** Make sure the base64 strings are in one line in the config file of your **local machine**
 
 Now your local kubectl should be ready to connect to your minikube cluster once its up and running
-
-
-
-
-## Start Minikube
-
-Start Minikube with a api-server on the ip you want to connect to. This ip address should be the adress of your host machine on which the cluster is running.
-If the cluster is behind some other proxy or what ever it has to be the adress of the first proxy the request will hit. It can even be a domain if you want to.
-Just make shure its the same one used before to setup the config file on your **local machine**
-
-````shell
-minikube start --apiserver-ips=<ipaddress>
-````
-  
   
   
 ## Add startup service
