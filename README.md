@@ -63,7 +63,7 @@ Install Nginx
 
 ````shell
 sudo apt-get update
-sudo apt-get isntall nginx
+sudo apt-get install nginx
 ````
 
 To check the installation ask for the nginx version
