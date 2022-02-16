@@ -138,7 +138,7 @@ Open that file and add the following to the list of **clusters** in the file. Re
 ````yml
 - cluster:
     certificate-authority-data: <ca.crt>
-    server: https://<ipaddress>:51999
+    server: https://<ipaddress>:51934
   name: minikube
 ````
 
@@ -171,7 +171,7 @@ preferences: {}
 clusters:
 - cluster:
     certificate-authority-data: <ca.crt>
-    server: https://<ipaddress>:51999
+    server: https://<ipaddress>:51934
   name: minikube
 contexts:
 - context:
